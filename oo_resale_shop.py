@@ -1,28 +1,54 @@
-# from typing import Dict, Union, Optional
+from computer import *
 
 class ResaleShop:
 
-    # What attributes will it need?
-
-    inventory: dict = {}
+    inventory: list
    
 
     # How will you set up your constructor?
     # idk what this wants me to do
 
 
-    def __init__(self, inventory):
-        self.inventory = inventory
+    def __init__(self):
+        self.inventory = []
 
 
     # What methods will you need?
 
-        def establishInventory(self, itemID, yearMade, ogPrice, operatingSystem):
-            self.inventory = {itemID: {yearMade, ogPrice, operatingSystem}}
         
-        def buyComputer(self, itemID, yearMade, ogPrice, operatingSystem):
-            itemID +=1
-            self.inventory = self.inventory[itemID, {yearMade, ogPrice, operatingSystem}]
+        def buyComputer(self):
+            comp = Computer(2023, 169.00, "OS", "Silver", "M1", "1 TB", "500 GB")
+            self.inventory.append(comp)
+
+        def sellComputer(self):
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         def updatePrice(self, itemID, newPrice):
             if itemID in self.inventory:
