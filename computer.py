@@ -3,7 +3,7 @@ class Computer:
     # What attributes will it need?
 
     yearMade: int
-    ogPrice: bool
+    ogPrice: float
     operatingSytem: str
     description: str
     processorType: str

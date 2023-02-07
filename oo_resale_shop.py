@@ -1,75 +1,55 @@
 from computer import *
 
+
 class ResaleShop:
 
-    inventory: list
-   
 
-    # How will you set up your constructor?
-    # idk what this wants me to do
+    inventory: list
 
 
     def __init__(self):
         self.inventory = []
 
-
-    # What methods will you need?
-
         
         def buyComputer(self):
             comp = Computer(2023, 169.00, "OS", "Silver", "M1", "1 TB", "500 GB")
+            # need to make it so that the comp is aligned with an itemID
+            # so you're really appending the itemID i think
             self.inventory.append(comp)
 
+
         def sellComputer(self):
+            # need it so when its sold the comp/or itemID is removed from the list ig
+            if itemID in self.inventory:
+                self.inventory.pop(itemID)
+            else:
+                return "Sorry item", itemID, "can not be found."
             
-           
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        def updatePrice(self, itemID, newPrice):
+        def updatePrice(self):
+            # im confused about this method and i dont know if i even need it
             if itemID in self.inventory:
-                self.inventory[itemID]["price"] = newPrice
-            else:
-                print("Item", itemID, "not found.")
+                pass
 
-        def sellComputer(self, itemID):
+
+        def refurbish(self):
+            # this needs to update all the stuff and do all the stuff on the computer
             if itemID in self.inventory:
-                del self.inventory[itemID]
-                print("Item", itemID, "sold!")
-            else: 
-                print("Item", itemID, "not found. Please select another item to sell.")
+                pass
 
-        def printInventory(self, itemID):
-            if self.inventory:
-                for itemID in self.inventory:
-                    print(f'Item ID: {itemID} : {self.inventory[itemID]}')
-            else:
-                print("No inventory to display.")
+        def printInventory(self):
+            # prints out inventory for the user to see what's in it
+            pass
 
+
+            
+        
+
+
+
+
+        # this is to work off of ...
+        
         def refurbish(self, itemID):
             if itemID in self.inventory:
                 computer = self.inventory[itemID]
@@ -87,8 +67,6 @@ class ResaleShop:
 
         
     def main():
-
-        computerOne = ResaleShop("01", {"2002, 3000, older OS"})
-        computerOne.print()
+        pass
     
     main()
