@@ -39,6 +39,9 @@ class ResaleShop:
 
         def printInventory(self):
             # prints out inventory for the user to see what's in it
+            # you can do this in computer, the computer.py class, use it as a method there
+            # for comp in self.inventory
+            #   printDetails()
             pass
 
 
