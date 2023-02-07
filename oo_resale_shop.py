@@ -73,3 +73,9 @@ class ResaleShop:
         pass
     
     main()
+
+
+# questions
+# do i need to connect an ID to the comp in the list, or is the comp index just the ID
+# what other computer class methods do i need
+# if i create a print details method in computer class, do i access that method in resale shop class or?
