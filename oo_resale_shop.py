@@ -12,6 +12,7 @@ class ResaleShop:
 
         
         def buyComputer(self):
+            # example:
             comp = Computer(2023, 169.00, "OS", "Silver", "M1", "1 TB", "500 GB")
             # need to make it so that the comp is aligned with an itemID
             # so you're really appending the itemID i think
