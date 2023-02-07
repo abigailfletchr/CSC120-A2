@@ -18,6 +18,15 @@ class ResaleShop:
             self.inventory.append(comp)
 
 
+
+        # def sell(self, c: Computer):
+        # if c in self.inventory:
+        #   self.inventory.pop(c)
+
+
+
+
+
         def sellComputer(self):
             # need it so when its sold the comp/or itemID is removed from the list ig
             if itemID in self.inventory:
@@ -77,5 +86,8 @@ class ResaleShop:
 
 # questions
 # do i need to connect an ID to the comp in the list, or is the comp index just the ID
+# response: dont need ID, the index is the ID for the comp compiuter class
 # what other computer class methods do i need
+# response: probab;y just the print details
 # if i create a print details method in computer class, do i access that method in resale shop class or?
+# response: no hehe

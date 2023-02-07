@@ -22,3 +22,5 @@ class Computer:
         self.memory = 0
 
     # What methods will you need?
+
+    # method: print details
