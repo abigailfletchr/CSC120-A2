@@ -1,5 +1,6 @@
-class Computer:
+from ResaleShop import *
 
+class Computer:
 
     yearMade: int
     ogPrice: float
@@ -22,18 +23,13 @@ class Computer:
 
 
 
-        def printInventory(self):
-            for comp in self.inventory:
-                print(self.yearMade)
-                print(self.ogPrice)
-                print(self.operatingSystem)
-                print(self.description)
-                print(self.processorType)
-                print(self.hardDriveCapacity)
-                print(self.memory)
+    def printDetails(self):
+        for comp in self.inventory:
+            print(self.yearMade)
+            print(self.ogPrice)
+            print(self.operatingSystem)
+            print(self.description)
+            print(self.processorType)
+            print(self.hardDriveCapacity)
+            print(self.memory)
 
-
-        def main():
-            pass
-
-        main()
