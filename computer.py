@@ -1,6 +1,5 @@
 class Computer:
 
-    # What attributes will it need?
 
     yearMade: int
     ogPrice: float
@@ -21,6 +20,20 @@ class Computer:
         self.hardDriveCapacity = 0
         self.memory = 0
 
-    # What methods will you need?
 
-    # method: print details
+
+        def printInventory(self):
+            for comp in self.inventory:
+                print(self.yearMade)
+                print(self.ogPrice)
+                print(self.operatingSystem)
+                print(self.description)
+                print(self.processorType)
+                print(self.hardDriveCapacity)
+                print(self.memory)
+
+
+        def main():
+            pass
+
+        main()

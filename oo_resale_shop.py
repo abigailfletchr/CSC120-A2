@@ -13,82 +13,58 @@ class ResaleShop:
         
         def buyComputer(self):
             # example:
-            comp = Computer(2023, 169.00, "OS", "Silver", "M1", "1 TB", "500 GB")
+            # comp = Computer(2023, 169.00, "OS", "Silver", "M1", "1 TB", "500 GB")
+            # comp = Computer(yearMade, ogPrice, operatingSystem, description, processorType, hardDriveCapacity, memory)
+            comp = Computer
             # need to make it so that the comp is aligned with an itemID
             # so you're really appending the itemID i think
             self.inventory.append(comp)
 
 
 
-        # def sell(self, c: Computer):
-        # if c in self.inventory:
-        #   self.inventory.pop(c)
 
-
-
-
-
-        def sellComputer(self):
+        def sellComputer(self, comp: Computer):
             # need it so when its sold the comp/or itemID is removed from the list ig
-            if itemID in self.inventory:
-                self.inventory.pop(itemID)
+            if comp in self.inventory:
+                self.inventory.pop(comp)
             else:
-                return "Sorry item", itemID, "can not be found."
+                return "Sorry item", comp, "can not be found."
             
 
-        def updatePrice(self):
+
+
+        def updatePrice(self, comp: Computer, newPrice):
             # im confused about this method and i dont know if i even need it
-            if itemID in self.inventory:
-                pass
-
-
-        def refurbish(self):
-            # this needs to update all the stuff and do all the stuff on the computer
-            if itemID in self.inventory:
-                pass
-
-        def printInventory(self):
-            # prints out inventory for the user to see what's in it
-            # you can do this in computer, the computer.py class, use it as a method there
-            # for comp in self.inventory
-            #   printDetails()
-            pass
-
-
-            
-        
-
-
-
-
-        # this is to work off of ...
-        
-        def refurbish(self, itemID):
-            if itemID in self.inventory:
-                computer = self.inventory[itemID]
-                if int(computer["yearMade"]) < 2000:
-                    computer["newPrice"] = 0 
-                elif int(computer["yearMade"]) < 2012:
-                    computer["newPrice"] = 250
-                elif int(computer["yearMade"]) < 2018:
-                    computer["newPrice"] = 550
-                else:
-                    computer["newPrice"] = 1000
+            if comp in self.inventory:
+                self.inventory[comp]["price"] = self.newPrice
             else:
-                print("Item", itemID, "not found. Please select another item to refurbish.")
+                print("Item", comp, "not found. Cannot update price.")
 
 
-        
+
+
+
+        def refurbish(self, comp: Computer, newOperatingSystem):
+            # this needs to update all the stuff and do all the stuff on the computer
+            if comp in self.inventory:
+                if int(comp[self.yearMade]) < 2000:
+                    comp[self.newPrice] = 0
+                elif int(comp[self.yearMade]) < 2012:
+                    comp[self.newPrice] = 250
+                elif int(comp[self.yearMade]) < 2018:
+                    comp[self.newPrice] = 550
+                else:
+                    comp[self.newPrice] = 1000
+                if self.newOperatingSystem is not None:
+                    comp[self.operatingSystem] = self.newOperatingSystem
+            else:
+                print("Item", comp, "not found. Please select another item to refurbish.")
+
+
+
+
+
     def main():
         pass
     
     main()
-
-
-# questions
-# do i need to connect an ID to the comp in the list, or is the comp index just the ID
-# response: dont need ID, the index is the ID for the comp compiuter class
-# what other computer class methods do i need
-# response: probab;y just the print details
-# if i create a print details method in computer class, do i access that method in resale shop class or?
-# response: no hehe
