@@ -35,7 +35,6 @@ class ResaleShop:
     def sellComputer(self, comp: Computer):
         if comp in self.inventory:
             return self.inventory.pop(comp)
-            # self.inventory.remove(comp)
         else:
             return "Sorry item", comp, "can not be found."
         
@@ -46,8 +45,6 @@ class ResaleShop:
     """
     def updatePrice(self, comp: Computer, newPrice):
         if comp in self.inventory:
-            # self.inventory[comp.ogPrice] = self.newPrice
-            # self.inventory[comp][comp.ogPrice] = newPrice
             self.inventory[comp].ogPrice = newPrice
         else:
             print("Item", comp, "not found. Cannot update price.")
@@ -79,22 +76,32 @@ class ResaleShop:
     Method to print the inventory of the resale store.
     """
     def printInventory(self):
-        for i in range(len(self.inventory)):
-            print(self.inventory[i].printDetails())
-        # for comp in self.inventory:
-        #     print(comp.printDetails())
+        for comp in self.inventory:
+            comp.printDetails()
 
 
 """
 The main method
 """
 def main():
-    # pass
+  
     rs = ResaleShop()
 
-    rs.buyComputer(2020, 4000, "23.234.", "ugly", "intel", 128, 64)
+    comp1 = Computer(2023, 4000, "23.234", "ugly, very ugly", "M1", 128, 64)
+
+    rs.buyComputer(comp1)
 
     rs.printInventory()
+
+    rs.sellComputer(comp1)
+
+    rs.printInventory()
+
+    comp2 = Computer(2000, 2000, "45.78", "white", "M1", 123, 23)
+
+    rs.buyComputer(comp2)
+
+    rs.refurbish(comp2)
 
 
 main()

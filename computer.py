@@ -1,4 +1,3 @@
-from ResaleShop import *
 
 """
 
@@ -25,25 +24,24 @@ class Computer:
     """
     def __init__(self, yearMade, ogPrice, operatingSystem, description, processorType, hardDriveCapacity, memory):
 
-        self.yearMade = 0
-        self.ogPrice = 0.0
-        self.operatingSystem = ""
-        self.description = ""
-        self.processorType = ""
-        self.hardDriveCapacity = 0
-        self.memory = 0
+        self.yearMade = yearMade
+        self.ogPrice = ogPrice
+        self.operatingSystem = operatingSystem
+        self.description = description
+        self.processorType = processorType
+        self.hardDriveCapacity = hardDriveCapacity
+        self.memory = memory
 
 
     """
     Method to print all of the details of a computer.
     """
     def printDetails(self):
-        for comp in self.inventory:
-            print(self.yearMade)
-            print(self.ogPrice)
-            print(self.operatingSystem)
-            print(self.description)
-            print(self.processorType)
-            print(self.hardDriveCapacity)
-            print(self.memory)
+        print("Year Made:", self.yearMade)
+        print("Price:", self.ogPrice)
+        print("Operating System:", self.operatingSystem)
+        print("Description:", self.description)
+        print("Processor Type:", self.processorType)
+        print("Hard drive Capacity:", self.hardDriveCapacity)
+        print("Memory:", self.memory)
 
