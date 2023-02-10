@@ -28,43 +28,43 @@ class ResaleShop:
     def buyComputer(self, yearMade, ogPrice, operatingSystem, description, processorType, hardDriveCapacity, memory):
         comp = Computer(yearMade, ogPrice, operatingSystem, description, processorType, hardDriveCapacity, memory)
         self.inventory.append(comp)
+        print("\n")
 
     """
     Method to buy a computer given a computer.
     """
     def buyComputer(self, comp: Computer):
         self.inventory.append(comp)
+        print("\n")
 
 
     """
     Method to sell the computer which returns the computer taken off of the inventory list.
     """
     def sellComputer(self, comp: Computer):
+        print("Selling computer... Please hold.")
         for c in self.inventory:
             if c == comp:
                 removed = c
                 self.inventory.remove(c)
                 return removed
+                print("\n")
         print("This computer does not exist in the inventory!")
-        # if comp in self.inventory:
-        #     return self.inventory.pop(comp)
-        # else:
-        #     return "Sorry item", comp, "can not be found."
-        
+        print("\n")
 
     """
     Method to update the price of a computer.
     """
     def updatePrice(self, comp: Computer, newPrice):
-        # for c in self.inventory:
-        #     if c == comp:
-        #         c.
+        print("Updating price... Please hold.")
         comp.ogPrice = newPrice
+        print("\n")
 
     """
     Method to refurbish a computer which updates its price and operating system.
     """
     def refurbish(self, comp: Computer):
+        print("Refurbishing... Please hold.")
         newOperatingSystem = "MacOS Monteray"
         comp.operatingSystem = newOperatingSystem
 
@@ -76,16 +76,17 @@ class ResaleShop:
             comp.ogPrice = 550
         else:
             comp.ogPrice = 1000
+        print("\n")
 
 
     """
     Method to print the inventory of the resale store.
     """
     def printInventory(self):
+        print("Printing inventory:")
         for comp in self.inventory:
-            print("___________________")
             comp.printDetails()
-            print("___________________")
+            print("\n")
 
 
 """
@@ -93,7 +94,7 @@ The main method
 """
 def main():
 
-    print("@@@~~~~~~~~~~~~~~~~~~~@@@")
+    print("___________________")
   
     rs = ResaleShop()
 
@@ -103,13 +104,9 @@ def main():
 
     rs.printInventory()
 
-    print("1~~~~~~~~~~~~~~~~~~~1")
-
     rs.sellComputer(comp1)
 
     rs.printInventory()
-    
-    print("2~~~~~~~~~~~~~~~~~~~2\nShould be blank before here")
 
     comp2 = Computer(2000, 2000, "45.78", "white", "M1", 123, 23)
 
@@ -117,13 +114,9 @@ def main():
 
     rs.printInventory()
 
-    print("2~~~~~~~~~~~~~~~~~~~2\nREFURBISHING:")
-
     rs.refurbish(comp2)
 
     rs.printInventory()
-
-    print("2~~~~~~~~~~~~~~~~~~~2\nUPDATING PRICE:")
 
     rs.updatePrice(comp2, 1500)
 
