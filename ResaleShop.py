@@ -48,7 +48,7 @@ class ResaleShop:
                 removed = c
                 self.inventory.remove(c)
                 return removed
-                print("\n")
+            print("\n")
         print("This computer does not exist in the inventory!")
         print("\n")
 
