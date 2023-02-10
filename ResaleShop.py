@@ -94,6 +94,8 @@ The main method
 """
 def main():
 
+    # below is how i tested that each method worked 
+
     print("___________________")
   
     rs = ResaleShop()
