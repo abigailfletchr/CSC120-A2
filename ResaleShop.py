@@ -21,6 +21,7 @@ class ResaleShop:
     def __init__(self):
         self.inventory = []
 
+
     """
     Method to buy a computer given attributes of the computer.
     """
